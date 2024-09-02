@@ -4,9 +4,9 @@ class LinksController < ApplicationController
     end
 
     def create
-        @link = Link.find(link_params)
+        @link = Link.new(link_params)
         if @link.save
-            redirect_to :root_path
+            redirect_to root_path
         else
             render :link, status: :unprocessable_entity
         end
