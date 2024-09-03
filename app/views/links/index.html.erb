@@ -2,7 +2,7 @@
 
 <%= form_with model:Link.new do |form|%>
     <div class="flex gap-2 ">
-        <%= form.url_field :url, placeholder: "https://example.com", requires: true, class:"flex-1 rounded "%>
+        <%= form.url_field :url, placeholder: "https://example.com", autofocus: true, requires: true, class:"flex-1 rounded "%>
         <%= form.submit "Save", class:"bg-red-200 rounded px-3 py-1"%>
     </div>
 <% end %>

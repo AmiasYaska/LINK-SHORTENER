@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
     def index
-        @links = Link.order(created_at: :asc)
+        @links = Link.order(created_at: :desc)
     end
 
     def create
@@ -17,4 +17,6 @@ class LinksController < ApplicationController
     def link_params
         params.require(:link).permit(:url)
     end
+
+    
 end
