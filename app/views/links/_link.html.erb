@@ -1,8 +1,8 @@
 <div class="text-xl mt-4">
     <%= tag.div dom_id(link) do %>
-        <%= link.to_param %>.
+        <%= link_to link.to_param, link %>.
         <div class="font-bold inline-block">
-            <%= link.url %>
+            <%= link.url%>
         </div>
     <% end %>
 </div>

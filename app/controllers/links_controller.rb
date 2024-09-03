@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+    before_action :set_link, only: [:show]
     def index
         @links = Link.order(created_at: :desc)
     end
@@ -13,10 +14,16 @@ class LinksController < ApplicationController
         end
     end
 
+    def show
+    end
+
     private
     def link_params
         params.require(:link).permit(:url)
     end
 
+    def set_link
+        @link = Link.find(params[:id])
+    end
     
 end
